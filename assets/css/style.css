@@ -145,6 +145,7 @@ h2 {
     .case {
         width: 13rem;
         height: 13rem;
+        font-size: 10rem;
     }
 }
 
@@ -156,6 +157,7 @@ h2 {
     .case {
         width: 8rem;
         height: 8rem;
+        font-size: 5rem;
     }
 
     #rules_choice {
