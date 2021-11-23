@@ -1,0 +1,165 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: rgba(255, 255, 255, 0.53);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5rem;
+    text-decoration-line: underline;
+    width: 20%;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+#container_two {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+#game {
+    width: 60rem;
+    height: 60rem;
+    box-shadow: 1rem 1rem 5rem 0.5rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.case {
+    width: 18rem;
+    height: 18rem;
+    font-size: 15rem;
+    text-align: center;
+    box-shadow: 1rem 1rem 2rem 0.5rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    color: rgba(0, 0, 0, 0.64);
+}
+
+.case:hover {
+    transform: scale(1.05);
+}
+
+#rules_choice {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    justify-content: center;
+}
+
+#rules {
+    border: 0.1rem solid black;
+    width: 80%;
+    border-radius: 2rem;
+    margin-bottom: 6.5rem;
+    padding: 2rem;
+    background-color: rgba(218, 6, 6, 0.43);
+}
+
+#choice {
+    border: 0.1rem solid black;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    background-color: rgba(218, 6, 6, 0.43);
+}
+
+h2 + p {
+    font-size: 2rem;
+}
+
+h2 {
+    text-align: center;
+    text-decoration-line: underline;
+    padding-bottom: 1.5rem;
+}
+
+#friend, #computer, #again {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.49);
+    color: white;
+    font-size: 1.5rem;
+}
+
+#friend:hover, #computer:hover, #again:hover {
+    background-color: whitesmoke;
+    color: black;
+    transform: scale(1.1);
+}
+
+#again {
+    width: 20rem;
+}
+
+#result {
+    margin-top: 3rem;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 1200px ){
+    #container_two {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #rules_choice {
+        width: 80%;
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    #game {
+        width: 45rem;
+        height: 45rem;
+    }
+    .case {
+        width: 13rem;
+        height: 13rem;
+    }
+}
+
+@media screen and (max-width: 465px){
+    #game {
+        width: 30rem;
+        height: 30rem;
+    }
+    .case {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    #rules_choice {
+        width: 100%;
+    }
+}
+
