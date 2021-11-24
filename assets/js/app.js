@@ -24,14 +24,22 @@ for (let i = 0; i < caseAll.length; i++) {
     caseAll[i].addEventListener("mouseup", function (event) {
         switch (event.button) {
             case LEFT_BUTTON: // set the left click to "X"
-                this.innerHTML = "X";
+                insertPlayerText(this, "X");
                 break;
             case RIGHT_BUTTON: // set the right click to "O"
-                this.innerHTML = "O";
+                insertPlayerText(this, "O");
                 break;
         }
         checkCases();
     })
+}
+
+function insertPlayerText(element, occupiedBox) {
+    if (!playerX && !playerO) {
+        if (element.innerHTML.length === 0) {
+            element.innerHTML = occupiedBox;
+        }
+    }
 }
 
 /*
