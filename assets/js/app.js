@@ -1,10 +1,11 @@
 /*
     Variable declaration
  */
-
+const LEFT_BUTTON = 0;
+const RIGHT_BUTTON = 2;
 let playerX = false;
 let playerO = false;
-let caseAll = document.getElementsByClassName('case');
+const caseAll = document.getElementsByClassName('case');
 
 
 /*
@@ -19,14 +20,15 @@ document.addEventListener("contextmenu", function (event){
     Assign the right click and left click keys
  */
 
-for (let i = 0; i <= 8; i++) {
+for (let i = 0; i < caseAll.length; i++) {
     caseAll[i].addEventListener("mouseup", function (event) {
         switch (event.button) {
-            case 0: // set the left click to "X"
-                caseAll[i].innerHTML = "X";
+            case LEFT_BUTTON: // set the left click to "X"
+                this.innerHTML = "X";
                 break;
-            case 2: // set the right click to "O"
-                caseAll[i].innerHTML = "O";
+            case RIGHT_BUTTON: // set the right click to "O"
+                this.innerHTML = "O";
+                break;
         }
         checkCases();
     })
