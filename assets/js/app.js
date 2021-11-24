@@ -34,6 +34,10 @@ for (let i = 0; i < caseAll.length; i++) {
     })
 }
 
+/*
+    Do not overwrite the first value
+ */
+
 function insertPlayerText(element, occupiedBox) {
     if (!playerX && !playerO) {
         if (element.innerHTML.length === 0) {
