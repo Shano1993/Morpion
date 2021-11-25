@@ -24,10 +24,10 @@ for (let i = 0; i < caseAll.length; i++) {
     caseAll[i].addEventListener("mouseup", function (event) {
         switch (event.button) {
             case LEFT_BUTTON: // set the left click to "X"
-                insertPlayerText(this, "X");
+                insertPlayer(this, "X");
                 break;
             case RIGHT_BUTTON: // set the right click to "O"
-                insertPlayerText(this, "O");
+                insertPlayer(this, "O");
                 break;
         }
         checkCases();
@@ -38,7 +38,7 @@ for (let i = 0; i < caseAll.length; i++) {
     Do not overwrite the first value
  */
 
-function insertPlayerText(element, occupiedBox) {
+function insertPlayer(element, occupiedBox) {
     if (!playerX && !playerO) {
         if (element.innerHTML.length === 0) {
             element.innerHTML = occupiedBox;
